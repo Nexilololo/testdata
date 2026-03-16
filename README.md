@@ -56,7 +56,6 @@ Workforce: Every maintenance task is assigned to a specific expert luthier or te
 
 
 # Data Generation Prompt
-`	ext
 I am a computer engineering student working on a database project using PostgreSQL. 
 Here is my Logical Data Model (LDM) for a high-end music instrument retail, rental, and repair company:
 
