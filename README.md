@@ -40,31 +40,31 @@ Workforce: Every maintenance task is assigned to a specific expert luthier or te
 
 
 # LDM (Logical Data Model)
-**customer** (<ins>id_cust</ins>, Cust_FirstName, Cust_LastName, Cust_Email, Cust_Phone)
+**customer** (<ins>id_cust</ins>, Cust_FirstName, Cust_LastName, Cust_Email, Cust_Phone);
 
-**instrument** (<ins>Inst_Serial</ins>, Inst_Brand, Inst_Model, Inst_Type, Inst_Condition, Inst_Weight, Sale_Price, *id_cust_owner#*)
+**instrument** (<ins>Inst_Serial</ins>, Inst_Brand, Inst_Model, Inst_Type, Inst_Condition, Inst_Weight, Sale_Price, *id_cust_owner#*);
 
-**rent** (*<ins>id_cust#</ins>*, *<ins>Inst_Serial#</ins>*, <ins>Rent_Start</ins>, Rent_Monthly)
+**rent** (*<ins>id_cust#</ins>*, *<ins>Inst_Serial#</ins>*, <ins>Rent_Start</ins>, Rent_Monthly);
 
-**component** (<ins>id_comp</ins>, Comp_Name, Comp_TechSpec)
+**component** (<ins>id_comp</ins>, Comp_Name, Comp_TechSpec);
 
-**composition** (*<ins>Inst_Serial#</ins>*, *<ins>id_comp#</ins>*, Assy_Name)
+**composition** (*<ins>Inst_Serial#</ins>*, *<ins>id_comp#</ins>*, Assy_Name);
 
-**maintenance** (<ins>id_maint</ins>, Maint_Date, *Inst_Serial#*)
+**maintenance** (<ins>id_maint</ins>, Maint_Date, *Inst_Serial#*);
 
-**task** (<ins>id_task</ins>, Task_Desc, Task_Duration)
+**task** (<ins>id_task</ins>, Task_Desc, Task_Duration);
 
-**perform** (*<ins>id_maint#</ins>*, *<ins>id_task#</ins>*, *id_luthier#*)
+**perform** (*<ins>id_maint#</ins>*, *<ins>id_task#</ins>*, *id_luthier#*);
 
-**luthier** (<ins>id_luthier</ins>, Luth_Name, Luth_Specialty)
+**luthier** (<ins>id_luthier</ins>, Luth_Name, Luth_Specialty);
 
-**part** (<ins>Part_Ref</ins>, Part_Name, Part_UnitCost, Stock_Qty, Wood_Species, Material_Type)
+**part** (<ins>Part_Ref</ins>, Part_Name, Part_UnitCost, Stock_Qty, Wood_Species, Material_Type);
 
-**consumption** (*<ins>id_maint#</ins>*, *<ins>id_task#</ins>*, *<ins>Part_Ref#</ins>*, quantity)
+**consumption** (*<ins>id_maint#</ins>*, *<ins>id_task#</ins>*, *<ins>Part_Ref#</ins>*, quantity);
 
-**supplier** (<ins>id_supp</ins>, Supp_Name)
+**supplier** (<ins>id_supp</ins>, Supp_Name);
 
-**supply** (*<ins>id_supp#</ins>*, *<ins>Part_Ref#</ins>*, Order_Date, Warranty_End)
+**supply** (*<ins>id_supp#</ins>*, *<ins>Part_Ref#</ins>*, Order_Date, Warranty_End);
 
 
 # Data Generation Prompt
