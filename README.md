@@ -109,7 +109,6 @@ Ensure that:
 4. Maintenance and tasks represent typical luthier operations (e.g., Fret dressing, Synth recap, String replacement).
 5. All IDs match up exactly so I don't get foreign key constraint violations during INSERT. 
 6. Provide only valid PostgreSQL INSERT INTO statements. Output them in the correct dependency order.
-`
 
 
 # Usage Scenario (Querying the DB)
