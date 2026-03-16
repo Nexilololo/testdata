@@ -59,19 +59,19 @@ Workforce: Every maintenance task is assigned to a specific expert luthier or te
 I am a computer engineering student working on a database project using PostgreSQL. 
 Here is my Logical Data Model (LDM) for a high-end music instrument retail, rental, and repair company:
 
-- **customer** (id_cust, Cust_FirstName, Cust_LastName, Cust_Email, Cust_Phone)
-- **instrument** (Inst_Serial, Inst_Brand, Inst_Model, Inst_Type, Inst_Condition, Inst_Weight, Sale_Price, id_cust_owner#)
-- **rent** (id_cust#, Inst_Serial#, Rent_Start, Rent_Monthly)
-- **component** (id_comp, Comp_Name, Comp_TechSpec)
-- **composition** (Inst_Serial#, id_comp#, Assy_Name)
-- **maintenance** (id_maint, Maint_Date, Inst_Serial#)
-- **task** (id_task, Task_Desc, Task_Duration)
-- **perform** (id_maint#, id_task#, id_luthier#)
-- **luthier** (id_luthier, Luth_Name, Luth_Specialty)
-- **part** (Part_Ref, Part_Name, Part_UnitCost, Stock_Qty, Wood_Species, Material_Type)
-- **consumption** (id_maint#, id_task#, Part_Ref#, quantity)
-- **supplier** (id_supp, Supp_Name)
-- **supply** (id_supp#, Part_Ref#, Order_Date, Warranty_End)
+**customer** (<ins>id_cust</ins>, Cust_FirstName, Cust_LastName, Cust_Email, Cust_Phone)
+**instrument** (<ins>Inst_Serial</ins>, Inst_Brand, Inst_Model, Inst_Type, Inst_Condition, Inst_Weight, Sale_Price, *id_cust_owner#*)
+**rent** (*<ins>id_cust#</ins>*, *<ins>Inst_Serial#</ins>*, <ins>Rent_Start</ins>, Rent_Monthly)
+**component** (<ins>id_comp</ins>, Comp_Name, Comp_TechSpec)
+**composition** (*<ins>Inst_Serial#</ins>*, *<ins>id_comp#</ins>*, Assy_Name)
+**maintenance** (<ins>id_maint</ins>, Maint_Date, *Inst_Serial#*)
+**task** (<ins>id_task</ins>, Task_Desc, Task_Duration)
+**perform** (*<ins>id_maint#</ins>*, *<ins>id_task#</ins>*, *id_luthier#*)
+**luthier** (<ins>id_luthier</ins>, Luth_Name, Luth_Specialty)
+**part** (<ins>Part_Ref</ins>, Part_Name, Part_UnitCost, Stock_Qty, Wood_Species, Material_Type)
+**consumption** (*<ins>id_maint#</ins>*, *<ins>id_task#</ins>*, *<ins>Part_Ref#</ins>*, quantity)
+**supplier** (<ins>id_supp</ins>, Supp_Name)
+**supply** (*<ins>id_supp#</ins>*, *<ins>Part_Ref#</ins>*, Order_Date, Warranty_End)
 
 Please generate 40 rows of realistic test data for customer, instrument, 
 ent and component.
