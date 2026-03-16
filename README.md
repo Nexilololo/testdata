@@ -40,7 +40,7 @@ Workforce: Every maintenance task is assigned to a specific expert luthier or te
 
 
 # LDM (Logical Data Model)
-- **customer** (<ins>id_cust</ins>, Cust_FirstName, Cust_LastName, Cust_Email, Cust_Phone)
+**customer** (<ins>id_cust</ins>, Cust_FirstName, Cust_LastName, Cust_Email, Cust_Phone)
 - **instrument** (<ins>Inst_Serial</ins>, Inst_Brand, Inst_Model, Inst_Type, Inst_Condition, Inst_Weight, Sale_Price, *id_cust_owner#*)
 - **rent** (*<ins>id_cust#</ins>*, *<ins>Inst_Serial#</ins>*, <ins>Rent_Start</ins>, Rent_Monthly)
 - **component** (<ins>id_comp</ins>, Comp_Name, Comp_TechSpec)
