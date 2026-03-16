@@ -111,11 +111,9 @@ Ensure that:
 6. Provide only valid PostgreSQL INSERT INTO statements. Output them in the correct dependency order.
 
 
-# Usage Scenario (Querying the DB)
-You are the **Operations and Marketing Manager** for this high-end music instrument retail, rental, and workshop company. You are preparing for the busy summer season when both touring musicians and local students require gear and repairs. You need to analyze the database to answer critical business questions:
-1. **Sales & Inventory Oversight**: Which of our high-end instruments are currently in pristine condition, and what is our stock levels for critical fretwire repair materials?
-2. **Financial Performance**: What are our highest valued rentals right now, and what is the average cost of materials we are keeping in stock?
+# Usage Scenario
+You are the operations and marketing manager for this high-end music instrument retail, rental, and workshop company. You are preparing for the busy summer season when both touring musicians and local students require gear and repairs. You need to analyze the database to answer business questions:
+1. **Sales & Inventory**: Which of our high-end instruments are currently in pristine condition, and what is our stock levels for critical fretwire repair materials?
+2. **Finance**: What are our highest valued rentals right now, and what is the average cost of materials we are keeping in stock?
 3. **Workshop Efficiency**: Which luthiers are performing the longest tasks, and which repair tasks consume the highest quantities of spare parts? 
 4. **Targeted Marketing & Operations**: Who are the customers that have submitted an instrument for maintenance but haven't rented anything recently, and which suppliers do we rely on for critical electronic components?
-
-To answer these questions, the .sql queries are designed to explore basic listing (selections), aggregate statistics (grouping), cross-referencing between departments (joins), and finding exceptional cases (nested queries).
